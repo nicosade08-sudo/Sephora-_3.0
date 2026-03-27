@@ -1,0 +1,97 @@
+@use './base' as *;
+.hero {
+  padding: 40px 20px;
+  background-color: $bg-color;
+  height: 400px;
+
+  &-container {
+    display: flex;
+    height: 100%;
+    flex-direction: row-reverse;
+  }
+
+  &-text,
+  &-image {
+    flex: 1;
+  }
+
+ &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+    background: #fbeee6;
+    padding: 40px;
+    border-radius: 0 10px 10px 0;
+
+    h1 {
+      color: $accent-color;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      color: $text-color;
+      line-height: 1.6;
+    }
+
+    button {
+  background: $accent-color;
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: medium;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+
+  transition: background 0.3s;
+
+ &:hover {
+    background: $accent-hover;
+}
+}
+  }
+
+  &-image {
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// 🔹 Responsive
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+
+    &-container {
+      flex-direction: column;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,40 @@
+@use './base' as *;
+.categories {
+    padding: 40px 20px;
+    display: flex;
+    gap: 20px;
+
+    .category-card {
+        background: transparent;
+        border-radius: 10px;
+        padding: 10px;
+        flex: 1;
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        &:hover {
+        transform: scale(1.03);
+  }
+        &:hover h3 {
+        color: $accent-color;
+}
+}
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        h3 {
+            color: $accent-color;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,80 @@
+@use './base' as *;
+header {
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 15px 20px;
+  background: transparent;
+  border-bottom: 1px solid $border-color;
+
+   svg {
+    stroke: $primary-color;
+  }
+
+  .logo {
+    color: $primary-color;
+    font-size: 20px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 30px;
+
+    .cart {
+      color: $accent-color;
+      cursor: pointer;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+      border: 1px solid $border-color;
+      border-radius: 20px;
+
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+    }
+  }
+}
+
+.user {
+  cursor: pointer;
+}
+.user svg,
+.cart svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+.user,
+.cart {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.user:hover svg,
+.cart:hover svg {
+  stroke: $accent-color;
+}
+.cart svg {
+  stroke: $primary-color;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-right {
+    gap: 15px;
+  }
+}

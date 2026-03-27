@@ -1,0 +1,22 @@
+// 🔹 Variabler (använd överallt)
+$bg-color: #eaeaea;
+$primary-color: #1a1a1a;
+$accent-color: #b76e79;
+$text-color: #4a4a4a;
+$border-color: #999;
+$accent-hover: #910a1f;
+
+// 🔹 Global styling
+body {
+  background: $bg-color;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0 5rem;
+}
+* {
+  font-family: inherit;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
